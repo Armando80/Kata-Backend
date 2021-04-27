@@ -20,8 +20,9 @@ module.exports = {
   },
 
   staging: {
+    client: 'postgresql',
     connection: {
-    host: 'queenie.db.elephantsql.com',
+      host: 'queenie.db.elephantsql.com',
       database: 'sfetowep',
       user:     'sfetowep',
       password: 'FTirovsOABt1zmACHzwkIPJ3L4mdnmfc'
@@ -36,6 +37,7 @@ module.exports = {
   },
 
   production: {
+    client: 'postgresql',
     connection: {
       host: 'queenie.db.elephantsql.com',
       database: 'sfetowep',
@@ -50,4 +52,5 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
+
 };

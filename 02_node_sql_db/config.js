@@ -5,4 +5,4 @@ const knex = require('knex');
 
 const knexInstance = knex(knexfile[env]);
 
-module.exports
+module.exports = knexInstance;
