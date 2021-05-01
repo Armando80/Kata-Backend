@@ -25,7 +25,7 @@ const create = (req, res) => {
     })
 }
 
-const findAll = async (req, res) => {
+ const findAll = async (req, res) => {
   try {
     const response = await Rental.findAll(); 
 
@@ -91,12 +91,12 @@ const deleteOneById = async (req, res) => {
       error,
     });
   }
-}
+} 
 
 module.exports = {
   create,
   findAll,
   findOneById,
   updateOneById,
-  deleteOneById,
+  deleteOneById, 
 }
