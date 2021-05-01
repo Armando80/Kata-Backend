@@ -1,5 +1,6 @@
 const create = (req, res) => {
 
+    console.log('🪐', req.body)
     const newUser = {
         first_name: '',
         last_name: '',
