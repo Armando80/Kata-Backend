@@ -4,7 +4,7 @@ const create = (bodyRental) => {
   return knex('rentals').insert(bodyRental);
 }
 
-/* const findAll = () => {
+const findAll = () => {
   return knex
     .select(['rental_id', 'title', 'address', 'guests', 'description', 'is_active', 'created_at'])
     .from('rentals');
@@ -30,12 +30,12 @@ const deleteOneById = (id) => {
     .update({ is_active: false })
     .from('rentals')
     .where({ rental_id: id });
-} */
+}
 
 module.exports = {
   create,
-  /* findAll,
+  findAll,
   findOneById,
   updateOneById,
-  deleteOneById, */
+  deleteOneById,
 }

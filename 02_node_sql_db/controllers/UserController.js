@@ -26,12 +26,28 @@ const create = (req, res) => {
     })
 
     // responder al usuario los que nos responda la base de datos
-    /* return res.status(200).json({
+    return res.status(200).json({
         message: 'user crated',
         user: newUser,
-    }) */
+    })
 }
+
+const findAll = async (req, res) => {
+  try{
+    const response = await User.findAll();
+    return res.status(200).json ({
+      message: 'Successfully obtained list of users',
+      response,
+    });
+  } catch(error) {
+    return res.status(500).json({
+      message: 'Error obtaining list of users',
+    });
+  }
+}
+
 
 module.exports = {
     create,
+    findAll,
 }
