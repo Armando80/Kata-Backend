@@ -10,8 +10,16 @@ const findAll = () => {
     .from('users');
 }
 
+const findOneById = (id) => {
+    return knex
+    .select(['user_id', 'first_name', 'last_name', 'email', 'phone', 'created_at'])
+    .from('users')
+    .where({ user_id: id });
+}
+
 
 module.exports = {
     create,
     findAll,
+    findOneById,
 }
