@@ -83,10 +83,26 @@ const updateOneById = async (req, res) => {
 
 }
 
+const deleteOneById = async (req, res) => {
+  const { idUser } = req.params;
+
+  try {
+      await User.deleteOneById(idUser);
+      return res.status(204).json ();
+  } catch (error) {
+    return res.status(500).json({
+      message: 'Server error',
+      error,
+    });
+  }
+
+}
+
 
 module.exports = {
     create,
     findAll,
     findOneById,
     updateOneById,
+    deleteOneById,
 }
