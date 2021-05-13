@@ -65,9 +65,28 @@ const findOneById = async (req, res) => {
 
 }
 
+const updateOneById = async (req, res) => {
+  const { idUser } = req.params;
+
+  try {
+      const response = await User.updateOneById(idUser, req.body);
+      return res.status(200).json ({
+      message: 'Successfully update user by id',
+      response,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      message: 'Server error',
+      error,
+    });
+  }
+
+}
+
 
 module.exports = {
     create,
     findAll,
     findOneById,
+    updateOneById,
 }

@@ -17,9 +17,17 @@ const findOneById = (id) => {
     .where({ user_id: id });
 }
 
+const updateOneById = (id, updateBody) => {
+    return knex
+    .update(updateBody)
+    .from('users')
+    .where({ user_id: id });
+}
+
 
 module.exports = {
     create,
     findAll,
     findOneById,
+    updateOneById,
 }
