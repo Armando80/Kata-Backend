@@ -16,7 +16,7 @@ module.exports = {
         }catch (error) {
             res.status(400).json({ message: 'error creating user', error });
         }
-    
+
     },
     findAll: async (req, res) => {
         try {
