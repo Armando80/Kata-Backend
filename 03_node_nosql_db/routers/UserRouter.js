@@ -10,8 +10,9 @@ router.get('/users', UserContoller.findAll);
 
 //Read one
 router.get('/users/:idUser', UserContoller.findOne);
-//Update one
 
+//Update one
+router.patch('/users/:idUser', UserContoller.updateOne);
 //Delete (Logical, One)
 
 module.exports = router;
