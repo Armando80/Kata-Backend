@@ -13,6 +13,10 @@ router.get('/users/:idUser', UserContoller.findOne);
 
 //Update one
 router.patch('/users/:idUser', UserContoller.updateOne);
+
 //Delete (Logical, One)
+router.delete('/users/:idUser', UserContoller.deleteOne);
+
+
 
 module.exports = router;
